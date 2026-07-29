@@ -1,0 +1,11 @@
+venv/
+__pycache__/
+pytest_cache/
+.git/
+data_base/
+data_pipeline/raw/
+*.parquet
+*.csv
+*.json
+*.tmp
+*.log

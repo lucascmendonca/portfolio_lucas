@@ -1,0 +1,9 @@
+pandas
+openpyxl
+boto3
+python-dotenv
+pytest
+moto
+pyarrow
+localstack-client
+loguru

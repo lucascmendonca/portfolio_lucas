@@ -1,0 +1,28 @@
+Guia rápido de uso - Projeto Cérebro Educacional
+
+1) Pré-requisitos
+- Python 3.10+
+- Recomenda-se criar um virtualenv: python -m venv .venv && .\.venv\Scripts\activate
+
+2) Instalar dependências
+pip install -r requirements.txt
+
+3) Configurar variáveis de ambiente
+Copiar .env.example para .env e preencher: OPENAI_API_KEY e (opcional) CHROMA_PERSIST_DIR
+
+4) Processar PDFs (criar/atualizar base vetorial)
+python -m src.cli --pdf caminho/para/arquivo1.pdf caminho/para/arquivo2.pdf --persist-dir ./chroma_db
+
+5) Consultar (exemplo de uso programático)
+from src.cerebro import PDFProcessor, ChunkProcessor, EmbeddingService, VectorStoreService, RAGEngine
+embed = EmbeddingService()
+vstore = VectorStoreService(persist_directory="./chroma_db")
+engine = RAGEngine(embed, vstore)
+print(engine.answer("Como funciona o loop for em Python?"))
+
+6) Observações
+- Se faltar bibliotecas de PDF, instale pymupdf ou PyPDF2.
+- Não compartilhe sua OPENAI_API_KEY publicamente.
+- Ajuste chunk_size/overlap em ChunkProcessor se necessário.
+
+Fim.

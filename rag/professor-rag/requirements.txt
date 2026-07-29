@@ -1,0 +1,7 @@
+pymupdf==1.22.3
+langchain==0.0.331
+chromadb==0.3.31
+openai==1.33.0
+python-dotenv==1.0.1
+# ollama client if used
+# ollama==0.0.0

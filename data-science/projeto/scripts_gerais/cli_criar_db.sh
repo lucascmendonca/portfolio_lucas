@@ -1,0 +1,1 @@
+aws glue create-database --database-input '{"Name": "db_projeto_puc"}'
