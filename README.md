@@ -1,50 +1,116 @@
-Portfólio de Projetos – Lucas Cardoso Mendonça
-Este repositório reúne projetos práticos nas áreas de engenharia de dados, ciência de dados, business intelligence e sistemas com IA. O objetivo é demonstrar experiência na construção de pipelines de dados, modelagem preditiva, dashboards interativos e soluções com recuperação aumentada de geração (RAG).
+# Portfólio de Dados, Analytics e Inteligência Artificial
 
-Projetos
-1. ETL Pipeline (Engenharia de Dados)
-Pasta: /etl
+Este repositório reúne projetos práticos nas áreas de **Engenharia de Dados**, **Ciência de Dados**, **Business Intelligence** e **Sistemas de Inteligência Artificial**. O objetivo é demonstrar experiência na construção de pipelines de dados, modelagem preditiva, dashboards interativos e soluções baseadas em **Retrieval-Augmented Generation (RAG)**.
 
-Pipeline de dados moderno com arquitetura em três camadas (RAW → STAGE → ANALYTICS), desenvolvido em Python com Pandas e PySpark. O projeto orquestra a ingestão, validação, deduplicação e modelagem de dados para consumo analítico.
+---
 
-Tecnologias: Python, Pandas, PySpark, Docker, LocalStack (simulação AWS S3/Glue)
+# Projetos
 
-Diferencial: Pipeline completo com testes automatizados (pytest) e ambiente isolado via Docker
+## 1. ETL Pipeline (Engenharia de Dados)
 
-2. Previsão de Inadimplência de Crédito (Ciência de Dados)
-Pasta: /data-science
+**Pasta:** `/etl`
 
-Projeto acadêmico que desenvolve um modelo supervisionado de machine learning para antecipar o risco de inadimplência na concessão de crédito. O objetivo é reduzir perdas financeiras, agilizar a tomada de decisão e personalizar condições de crédito.
+Pipeline de dados moderno com arquitetura em três camadas (**RAW → STAGE → ANALYTICS**), desenvolvido em Python utilizando Pandas e PySpark. O projeto realiza ingestão, validação, deduplicação e modelagem de dados para consumo analítico.
 
-Tecnologias: Aprendizado de máquina (modelo supervisionado)
+### Tecnologias
+- Python
+- Pandas
+- PySpark
+- Docker
+- LocalStack (simulação de serviços AWS como S3 e Glue)
 
-Estrutura: Documentação completa em etapas (coleta, pré-processamento, treino, análise e otimização)
+### Diferenciais
+- Pipeline completo de ponta a ponta
+- Testes automatizados com `pytest`
+- Ambiente isolado e reproduzível via Docker
+- Estrutura baseada em boas práticas de Engenharia de Dados
 
-3. Dashboards em Power BI
-Pasta: /power-bi
+---
 
-Conjunto de dashboards interativos para diferentes áreas de negócio:
+## 2. Previsão de Inadimplência de Crédito (Ciência de Dados)
 
-Gestão de Contratos – Procurement
+**Pasta:** `/data-science`
 
-Gestão e Planejamento de Eventos
+Projeto acadêmico focado no desenvolvimento de um modelo supervisionado de Machine Learning para prever o risco de inadimplência em operações de crédito.
 
-Dashboard de Tesouraria
+O objetivo é auxiliar instituições financeiras na redução de perdas, melhoria da tomada de decisão e personalização das condições de crédito.
 
-Os relatórios evidenciam capacidade de transformar dados brutos em insights visuais para tomada de decisão.
+### Tecnologias
+- Python
+- Machine Learning Supervisionado
+- Análise Estatística
 
-4. Sistema RAG – "Cérebro Educacional" (IA & Busca Semântica)
-Pasta: /rag/professor-rag
+### Estrutura do Projeto
+1. Coleta de dados
+2. Pré-processamento
+3. Engenharia de atributos
+4. Treinamento do modelo
+5. Avaliação de desempenho
+6. Otimização e ajustes
 
-Sistema de Retrieval-Augmented Generation (RAG) que converte PDFs em uma base de conhecimento consultável via IA. O pipeline extrai texto dos documentos, gera embeddings vetoriais, armazena em banco vetorial (ChromaDB) e utiliza um LLM para responder perguntas com base no conteúdo indexado.
+### Objetivos de Negócio
+- Redução de riscos financeiros
+- Aumento da assertividade na concessão de crédito
+- Apoio à tomada de decisão baseada em dados
 
-Tecnologias: Python, OpenAI Embeddings, OpenAI GPT, ChromaDB, PyMuPDF
+---
 
-Fluxo: PDF → Extração → Chunking → Embeddings → Busca semântica → LLM → Resposta
+## 3. Dashboards em Power BI
 
-Documentos Complementares
-BLUE TAG FLUXO - Performa IT.pdf – fluxograma de processo
+**Pasta:** `/power-bi`
 
-GUIA PARA ARQUITETURA DE PASTAS SHAREPOINT (1).pdf – guia de organização de pastas
+Coleção de dashboards interativos desenvolvidos para diferentes áreas de negócio, com foco em visualização de dados, monitoramento de indicadores e suporte à tomada de decisão.
 
-projeto_eixo_4.html – artefato HTML de projeto
+### Projetos Disponíveis
+
+#### Gestão de Contratos – Procurement
+Dashboard voltado ao acompanhamento de contratos, vencimentos, fornecedores e indicadores de desempenho.
+
+#### Gestão e Planejamento de Eventos
+Painel para monitoramento de eventos, recursos, cronogramas e métricas operacionais.
+
+#### Dashboard de Tesouraria
+Visualização financeira para acompanhamento de fluxo de caixa, pagamentos, recebimentos e indicadores financeiros.
+
+### Competências Demonstradas
+- Modelagem de dados
+- Criação de métricas com DAX
+- Storytelling com dados
+- Desenvolvimento de dashboards executivos
+- Transformação de dados em insights acionáveis
+
+---
+
+## 4. Sistema RAG – "Cérebro Educacional" (IA & Busca Semântica)
+
+**Pasta:** `/rag/professor-rag`
+
+Sistema baseado em **Retrieval-Augmented Generation (RAG)** que transforma documentos PDF em uma base de conhecimento consultável por Inteligência Artificial.
+
+O pipeline realiza a extração de texto dos documentos, geração de embeddings vetoriais, armazenamento em banco vetorial e recuperação contextual para responder perguntas utilizando modelos de linguagem (LLMs).
+
+### Tecnologias
+- Python
+- OpenAI Embeddings
+- OpenAI GPT
+- ChromaDB
+- PyMuPDF
+
+### Fluxo da Solução
+
+```text
+PDF
+ ↓
+Extração de Texto
+ ↓
+Chunking
+ ↓
+Geração de Embeddings
+ ↓
+Armazenamento Vetorial (ChromaDB)
+ ↓
+Busca Semântica
+ ↓
+LLM (GPT)
+ ↓
+Resposta Contextualizada
